@@ -115,7 +115,7 @@ export function FinalCTA() {
               </Button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5" autoComplete="off">
               <div>
                 <h3 className="text-xl font-bold mb-6">Nezávazná poptávka</h3>
               </div>
@@ -128,7 +128,9 @@ export function FinalCTA() {
                     name="name"
                     required 
                     type="text" 
-                    className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" 
+                    autoComplete="off"
+                    data-1p-ignore="true"
+                    className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm placeholder:text-muted-foreground/50 transition-all" 
                     placeholder="Jan Novák" 
                   />
                 </div>
@@ -138,7 +140,9 @@ export function FinalCTA() {
                     id="phone" 
                     name="phone"
                     type="tel" 
-                    className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" 
+                    autoComplete="off"
+                    data-1p-ignore="true"
+                    className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm placeholder:text-muted-foreground/50 transition-all" 
                     placeholder="+420 123 456 789" 
                   />
                 </div>
@@ -151,7 +155,9 @@ export function FinalCTA() {
                   name="email"
                   required 
                   type="email" 
-                  className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" 
+                  autoComplete="off"
+                  data-1p-ignore="true"
+                  className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm placeholder:text-muted-foreground/50 transition-all" 
                   placeholder="jan@novak.cz" 
                 />
               </div>
@@ -161,7 +167,9 @@ export function FinalCTA() {
                 <select 
                   id="package" 
                   name="package"
-                  className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent appearance-none cursor-pointer"
+                  autoComplete="off"
+                  data-1p-ignore="true"
+                  className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm text-foreground transition-all appearance-none cursor-pointer"
                 >
                   <option value="Nevím, chci poradit">Nevím, chci poradit</option>
                   <option value="Start (490 Kč/měsíc)">Start (490 Kč/měsíc)</option>
@@ -176,7 +184,9 @@ export function FinalCTA() {
                   id="message" 
                   name="message"
                   required 
-                  className="w-full min-h-[120px] rounded-lg border border-input bg-background px-4 py-3 text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-y" 
+                  autoComplete="off"
+                  data-1p-ignore="true"
+                  className="w-full min-h-[120px] rounded-lg border border-input bg-background px-4 py-3 text-sm placeholder:text-muted-foreground/50 transition-all resize-y" 
                   placeholder="Dobrý den, potřeboval bych rezervační systém a nový web pro můj salón..." 
                 />
               </div>
