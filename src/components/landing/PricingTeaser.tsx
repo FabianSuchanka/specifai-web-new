@@ -68,10 +68,10 @@ export function PricingTeaser() {
           {tiers.map((t, i) => (
             <RevealOnScroll key={t.name} delay={i * 80}>
               <div
-                className={`relative h-full rounded-2xl border p-7 transition-all duration-300 ${
+                className={`relative h-full rounded-2xl border p-7 transition-all duration-500 hover:scale-[1.02] ${
                   t.highlighted
-                    ? "border-primary/60 bg-card shadow-[var(--shadow-elegant)]"
-                    : "border-border bg-card hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)]"
+                    ? "border-primary/60 bg-card shadow-[var(--shadow-elegant)] hover:shadow-[0_20px_50px_-12px_rgba(var(--primary-rgb,99,102,241),0.4)]"
+                    : "border-border bg-card hover:border-primary/30 hover:shadow-[var(--shadow-elegant)]"
                 }`}
               >
                 {t.highlighted && (

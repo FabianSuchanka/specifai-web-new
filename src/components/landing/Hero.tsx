@@ -1,13 +1,39 @@
 import { ArrowRight, Play, ShieldCheck, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RevealOnScroll } from "./RevealOnScroll";
+import { useEffect, useState, useRef } from "react";
 
 export function Hero() {
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!sectionRef.current) return;
+      const rect = sectionRef.current.getBoundingClientRect();
+      setMousePos({
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top,
+      });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
     <section
       id="top"
-      className="relative pt-32 pb-24 sm:pt-40 sm:pb-32 overflow-hidden"
+      ref={sectionRef}
+      className="relative pt-32 pb-24 sm:pt-40 sm:pb-32 overflow-hidden group"
     >
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10 transition-opacity duration-1000 group-hover:opacity-100 opacity-0 pointer-events-none"
+        style={{
+          background: `radial-gradient(1200px circle at ${mousePos.x}px ${mousePos.y}px, color-mix(in oklab, var(--primary) 12%, transparent), transparent 40%)`,
+        }}
+      />
       <div
         aria-hidden
         className="absolute inset-0 -z-10"
