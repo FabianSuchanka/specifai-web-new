@@ -130,7 +130,7 @@ export function FinalCTA() {
                     type="text" 
                     autoComplete="off"
                     data-1p-ignore="true"
-                    className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm placeholder:text-muted-foreground/50 transition-all" 
+                    className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm placeholder:text-muted-foreground/50" 
                     placeholder="Jan Novák" 
                   />
                 </div>
@@ -142,7 +142,7 @@ export function FinalCTA() {
                     type="tel" 
                     autoComplete="off"
                     data-1p-ignore="true"
-                    className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm placeholder:text-muted-foreground/50 transition-all" 
+                    className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm placeholder:text-muted-foreground/50" 
                     placeholder="+420 123 456 789" 
                   />
                 </div>
@@ -157,7 +157,7 @@ export function FinalCTA() {
                   type="email" 
                   autoComplete="off"
                   data-1p-ignore="true"
-                  className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm placeholder:text-muted-foreground/50 transition-all" 
+                  className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm placeholder:text-muted-foreground/50" 
                   placeholder="jan@novak.cz" 
                 />
               </div>
@@ -169,7 +169,7 @@ export function FinalCTA() {
                   name="package"
                   autoComplete="off"
                   data-1p-ignore="true"
-                  className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm text-foreground transition-all appearance-none cursor-pointer"
+                  className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm text-foreground appearance-none cursor-pointer"
                 >
                   <option value="Nevím, chci poradit">Nevím, chci poradit</option>
                   <option value="Start (490 Kč/měsíc)">Start (490 Kč/měsíc)</option>
@@ -186,7 +186,7 @@ export function FinalCTA() {
                   required 
                   autoComplete="off"
                   data-1p-ignore="true"
-                  className="w-full min-h-[120px] rounded-lg border border-input bg-background px-4 py-3 text-sm placeholder:text-muted-foreground/50 transition-all resize-y" 
+                  className="w-full min-h-[120px] rounded-lg border border-input bg-background px-4 py-3 text-sm placeholder:text-muted-foreground/50 resize-y" 
                   placeholder="Dobrý den, potřeboval bych rezervační systém a nový web pro můj salón..." 
                 />
               </div>
