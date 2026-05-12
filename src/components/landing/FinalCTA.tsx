@@ -8,39 +8,40 @@ export function FinalCTA() {
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    package: "Nevím, chci poradit",
+    message: "",
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setErrorMsg("");
 
-    const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get("name"),
-      phone: formData.get("phone"),
-      email: formData.get("email"),
-      package: formData.get("package"),
-      message: formData.get("message"),
-    };
-
     try {
-      // Rozlišení URL pro vývojový server (Vite) a produkční prostředí
-      const apiUrl = import.meta.env.DEV 
-        ? "http://localhost/speifainewdesign/specifai-czech-beauty-builder-main/public/api/contact.php"
-        : "/api/contact.php";
+      const apiUrl = "/api/contact";
 
       const res = await fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(formData),
       });
 
       const result = await res.json();
 
       if (res.ok && result.status === "success") {
         setSubmitted(true);
-        e.currentTarget.reset();
+        setFormData({ name: "", phone: "", email: "", package: "Nevím, chci poradit", message: "" });
       } else {
         setErrorMsg(result.message || "Něco se pokazilo, zkuste to prosím znovu.");
       }
@@ -54,10 +55,10 @@ export function FinalCTA() {
 
   return (
     <section id="kontakt" className="py-20 sm:py-28 relative overflow-hidden">
-      {/* Decorative background gradient (replaces expensive blur filter) */}
+      {/* Opravený gradient bez color-mix pro prevenci zamrzání v Safari */}
       <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full pointer-events-none" 
-        style={{ background: "radial-gradient(circle, color-mix(in oklab, var(--primary) 5%, transparent) 0%, transparent 70%)" }}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full pointer-events-none transform-gpu" 
+        style={{ background: "radial-gradient(circle, rgba(var(--primary-rgb, 99,102,241), 0.08) 0%, transparent 70%)" }}
       />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center relative z-10">
@@ -98,7 +99,7 @@ export function FinalCTA() {
         </RevealOnScroll>
 
         {/* Right Side: Form */}
-        <div className="rounded-3xl border border-border bg-card p-6 sm:p-10 shadow-[var(--shadow-elegant)] relative overflow-hidden">
+        <div className="rounded-3xl border border-border bg-card p-6 sm:p-10 shadow-[var(--shadow-elegant)] relative overflow-hidden transform-gpu">
           <div className="absolute top-0 left-0 w-full h-1.5 bg-[image:var(--gradient-primary)]" />
           
           {submitted ? (
@@ -126,11 +127,13 @@ export function FinalCTA() {
                   <input 
                     id="name" 
                     name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     required 
                     type="text" 
                     autoComplete="off"
                     data-1p-ignore="true"
-                    className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm placeholder:text-muted-foreground/50" 
+                    className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm placeholder:text-muted-foreground/50 transition-colors" 
                     placeholder="Jan Novák" 
                   />
                 </div>
@@ -139,10 +142,12 @@ export function FinalCTA() {
                   <input 
                     id="phone" 
                     name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
                     type="tel" 
                     autoComplete="off"
                     data-1p-ignore="true"
-                    className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm placeholder:text-muted-foreground/50" 
+                    className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm placeholder:text-muted-foreground/50 transition-colors" 
                     placeholder="+420 123 456 789" 
                   />
                 </div>
@@ -153,11 +158,13 @@ export function FinalCTA() {
                 <input 
                   id="email" 
                   name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                   required 
                   type="email" 
                   autoComplete="off"
                   data-1p-ignore="true"
-                  className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm placeholder:text-muted-foreground/50" 
+                  className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm placeholder:text-muted-foreground/50 transition-colors" 
                   placeholder="jan@novak.cz" 
                 />
               </div>
@@ -167,9 +174,11 @@ export function FinalCTA() {
                 <select 
                   id="package" 
                   name="package"
+                  value={formData.package}
+                  onChange={handleInputChange}
                   autoComplete="off"
                   data-1p-ignore="true"
-                  className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm text-foreground appearance-none cursor-pointer"
+                  className="w-full h-11 rounded-lg border border-input bg-background px-4 py-2 text-sm text-foreground appearance-none cursor-pointer transition-colors"
                 >
                   <option value="Nevím, chci poradit">Nevím, chci poradit</option>
                   <option value="Start (490 Kč/měsíc)">Start (490 Kč/měsíc)</option>
@@ -183,10 +192,12 @@ export function FinalCTA() {
                 <textarea 
                   id="message" 
                   name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   required 
                   autoComplete="off"
                   data-1p-ignore="true"
-                  className="w-full min-h-[120px] rounded-lg border border-input bg-background px-4 py-3 text-sm placeholder:text-muted-foreground/50 resize-y" 
+                  className="w-full min-h-[120px] rounded-lg border border-input bg-background px-4 py-3 text-sm placeholder:text-muted-foreground/50 resize-y transition-colors" 
                   placeholder="Dobrý den, potřeboval bych rezervační systém a nový web pro můj salón..." 
                 />
               </div>
@@ -197,7 +208,7 @@ export function FinalCTA() {
                 </div>
               )}
 
-              <Button type="submit" disabled={loading} className="w-full h-12 bg-[image:var(--gradient-primary)] text-primary-foreground text-base shadow-sm mt-2 disabled:opacity-70">
+              <Button type="submit" disabled={loading} className="w-full h-12 bg-[image:var(--gradient-primary)] text-primary-foreground text-base shadow-sm mt-2 disabled:opacity-70 transition-transform active:scale-[0.98]">
                 {loading ? "Odesílám..." : "Odeslat zprávu"}
                 {!loading && <ArrowRight className="ml-2 h-4 w-4" />}
               </Button>
