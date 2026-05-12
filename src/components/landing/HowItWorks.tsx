@@ -21,7 +21,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="py-20 sm:py-28 bg-background overflow-hidden">
+    <section id="onas" className="py-20 sm:py-28 bg-background overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <RevealOnScroll>
           <div className="max-w-2xl mx-auto text-center">

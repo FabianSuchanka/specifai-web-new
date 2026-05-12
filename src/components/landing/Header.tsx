@@ -36,15 +36,15 @@ export function Header() {
   ) => {
     if (!href.startsWith("#")) return;
     e.preventDefault();
-    setOpen(false);
     const id = href.slice(1);
     const target = document.getElementById(id);
     if (target) {
+      setOpen(false);
       // Slight delay so the sheet close animation can begin first
       setTimeout(() => {
         target.scrollIntoView({ behavior: "smooth", block: "start" });
         history.replaceState(null, "", href);
-      }, 80);
+      }, 300);
     }
   };
 
