@@ -43,9 +43,15 @@ export function ROICalculator() {
 
   return (
     <section id="kalkulacka" className="py-20 sm:py-28 bg-background relative overflow-hidden">
-      {/* Decorative blobs */}
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-chart-2/5 rounded-full blur-3xl pointer-events-none" />
+      {/* Decorative blobs (replaced expensive blur filter with radial-gradient) */}
+      <div 
+        className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] rounded-full pointer-events-none" 
+        style={{ background: "radial-gradient(circle, color-mix(in oklab, var(--primary) 5%, transparent) 0%, transparent 70%)" }}
+      />
+      <div 
+        className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full pointer-events-none" 
+        style={{ background: "radial-gradient(circle, color-mix(in oklab, var(--chart-2) 5%, transparent) 0%, transparent 70%)" }}
+      />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <RevealOnScroll>

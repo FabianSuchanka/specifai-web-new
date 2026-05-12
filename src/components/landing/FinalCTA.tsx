@@ -54,8 +54,11 @@ export function FinalCTA() {
 
   return (
     <section id="kontakt" className="py-20 sm:py-28 relative overflow-hidden">
-      {/* Decorative background blur */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+      {/* Decorative background gradient (replaces expensive blur filter) */}
+      <div 
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full pointer-events-none" 
+        style={{ background: "radial-gradient(circle, color-mix(in oklab, var(--primary) 5%, transparent) 0%, transparent 70%)" }}
+      />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left Side: Copy & Info */}
