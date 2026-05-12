@@ -36,32 +36,6 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "cs_CZ" },
     ],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "SoftwareApplication",
-          "name": "SpecifAI",
-          "applicationCategory": "BusinessApplication",
-          "operatingSystem": "Web",
-          "offers": {
-            "@type": "Offer",
-            "price": "490",
-            "priceCurrency": "CZK"
-          },
-          "description": "Rezervační systém a tvorba webových stránek pro ulehčení podnikání v České republice.",
-          "provider": {
-            "@type": "Organization",
-            "name": "SpecifAI",
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "CZ"
-            }
-          }
-        })
-      }
-    ]
   }),
   component: Index,
 });
