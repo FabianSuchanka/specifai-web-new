@@ -39,12 +39,17 @@ export function Header() {
     const id = href.slice(1);
     const target = document.getElementById(id);
     if (target) {
-      setOpen(false);
-      // Slight delay so the sheet close animation can begin first
-      setTimeout(() => {
+      if (open) {
+        setOpen(false);
+        // Slight delay so the sheet close animation can begin first
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+          history.replaceState(null, "", href);
+        }, 300);
+      } else {
         target.scrollIntoView({ behavior: "smooth", block: "start" });
         history.replaceState(null, "", href);
-      }, 300);
+      }
     }
   };
 
