@@ -152,8 +152,11 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
-    animation: fade-in-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes fade-in-up {

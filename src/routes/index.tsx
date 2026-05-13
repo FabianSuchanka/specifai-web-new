@@ -44,20 +44,22 @@ function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      <main>
-        <Hero />
-        <FeatureTrinity />
-        <IndustryGrid />
-        <Projects />
-        <AutomationProof />
-        <ROICalculator />
-        <Comparison />
-        <HowItWorks />
-        <PricingTeaser />
-        <FAQ />
-        <FinalCTA />
-      </main>
-      <Footer />
+      <div className="animate-fade-in-up">
+        <main>
+          <Hero />
+          <FeatureTrinity />
+          <IndustryGrid />
+          <Projects />
+          <AutomationProof />
+          <ROICalculator />
+          <Comparison />
+          <HowItWorks />
+          <PricingTeaser />
+          <FAQ />
+          <FinalCTA />
+        </main>
+        <Footer />
+      </div>
       <ContactSalesButton />
     </div>
   );

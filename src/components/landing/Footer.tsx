@@ -32,9 +32,9 @@ const cols = [
 export function Footer() {
   return (
     <footer className="border-t border-border bg-muted/30">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10">
-          <div className="col-span-1 sm:col-span-2 md:col-span-2">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-y-10 gap-x-8 md:gap-10">
+          <div className="col-span-2 md:col-span-2">
             <div className="flex items-center gap-2 font-bold text-lg">
               <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-[image:var(--gradient-primary)] text-primary-foreground">
                 <Sparkles className="h-4 w-4" />
@@ -60,7 +60,7 @@ export function Footer() {
           </div>
 
           {cols.map((c) => (
-            <div key={c.title}>
+            <div key={c.title} className="col-span-1">
               <div className="text-sm font-semibold">{c.title}</div>
               <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
                 {c.links.map((l) => (
