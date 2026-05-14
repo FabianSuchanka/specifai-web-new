@@ -162,7 +162,7 @@ export function Projects() {
                       <div className="aspect-[16/9] overflow-hidden">
                         <img
                           src={s.src}
-                          alt=""
+                          alt={s.alt}
                           loading="lazy"
                           className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
                         />

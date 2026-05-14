@@ -85,7 +85,7 @@ export function FinalCTA() {
                   <div className="text-sm">fabian.suchanka@specifai.cz</div>
                 </div>
               </a>
-              <a href="tel:773952636" className="flex items-center gap-4 text-muted-foreground hover:text-foreground transition-colors group">
+              <a href="tel:+420773952636" className="flex items-center gap-4 text-muted-foreground hover:text-foreground transition-colors group">
                 <div className="h-12 w-12 rounded-2xl bg-muted/50 border border-border flex items-center justify-center text-primary group-hover:border-primary/40 group-hover:bg-primary/10 transition-all">
                   <Phone className="h-5 w-5" />
                 </div>

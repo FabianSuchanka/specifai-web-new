@@ -31,7 +31,7 @@ const comparisonData = [
 
 export function Comparison() {
   return (
-    <section id="onas" className="py-20 sm:py-28 bg-background">
+    <section id="porovnani" className="py-20 sm:py-28 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <RevealOnScroll>
           <div className="max-w-3xl mx-auto text-center">
