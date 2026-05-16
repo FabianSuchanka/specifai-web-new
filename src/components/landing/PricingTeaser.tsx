@@ -12,7 +12,7 @@ const tiers = [
       "Web na subdoméně",
       "Rezervační kalendář",
       "E-mailové notifikace",
-      "Správa služeb a cen"
+      "Správa služeb a cen",
     ],
     cta: "Začít zdarma",
     highlighted: false,
@@ -27,7 +27,7 @@ const tiers = [
       "SEO optimalizace",
       "Synchronizace s Google kalendářem",
       "Kalendář pro více zaměstnanců",
-      "Statistiky tržeb"
+      "Statistiky tržeb",
     ],
     cta: "Vybrat Standard",
     highlighted: true,
@@ -42,7 +42,7 @@ const tiers = [
       "SMS připomínky (No-show killer)",
       "Marketingové automatizace",
       "Sběr Google recenzí",
-      "Přednostní podpora"
+      "Přednostní podpora",
     ],
     cta: "Chci Autopilota",
     highlighted: false,
@@ -55,9 +55,7 @@ export function PricingTeaser() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <RevealOnScroll>
           <div className="max-w-2xl">
-            <p className="text-sm font-semibold tracking-wider text-primary uppercase">
-              Ceník
-            </p>
+            <p className="text-sm font-semibold tracking-wider text-primary uppercase">Ceník</p>
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight">
               Transparentní ceny. Bez překvapení.
             </h2>
@@ -112,7 +110,9 @@ export function PricingTeaser() {
         <RevealOnScroll delay={300}>
           <div className="mt-10 text-center">
             <p className="text-sm text-muted-foreground">
-              Všechny tarify zahrnují jednorázový zřizovací poplatek <strong className="text-foreground">2 900 Kč</strong> za kompletní nastavení webu, SEO a domény.
+              Všechny tarify zahrnují jednorázový zřizovací poplatek{" "}
+              <strong className="text-foreground">2 900 Kč</strong> za kompletní nastavení webu, SEO
+              a domény.
             </p>
           </div>
         </RevealOnScroll>

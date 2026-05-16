@@ -38,9 +38,8 @@ export function CookieBanner() {
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="text-sm text-muted-foreground flex-1">
           <p>
-            Používáme cookies, abychom zajistili správné fungování webu a analyzovali
-            návštěvnost. Kliknutím na tlačítko „Souhlasím“ nám k tomu udělíte
-            svolení. Více informací naleznete v{" "}
+            Používáme cookies, abychom zajistili správné fungování webu a analyzovali návštěvnost.
+            Kliknutím na tlačítko „Souhlasím“ nám k tomu udělíte svolení. Více informací naleznete v{" "}
             <a href="/cookies" className="text-primary hover:underline font-medium">
               Zásadách používání cookies
             </a>
@@ -48,11 +47,7 @@ export function CookieBanner() {
           </p>
         </div>
         <div className="flex items-center gap-3 w-full sm:w-auto shrink-0">
-          <Button
-            variant="outline"
-            className="flex-1 sm:flex-none"
-            onClick={handleReject}
-          >
+          <Button variant="outline" className="flex-1 sm:flex-none" onClick={handleReject}>
             Odmítnout
           </Button>
           <Button

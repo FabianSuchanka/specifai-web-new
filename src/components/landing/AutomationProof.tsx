@@ -14,9 +14,9 @@ export function AutomationProof() {
               Ušetřete <span className="text-primary">12+ hodin</span> týdně.
             </h2>
             <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
-              Klient si rezervuje termín — a všechno ostatní se stane samo.
-              Potvrzení e-mailem, SMS připomínka den předem, follow-up po
-              návštěvě. Vy se soustředíte na zákazníka, ne na administrativu.
+              Klient si rezervuje termín — a všechno ostatní se stane samo. Potvrzení e-mailem, SMS
+              připomínka den předem, follow-up po návštěvě. Vy se soustředíte na zákazníka, ne na
+              administrativu.
             </p>
             <ul className="mt-6 space-y-3">
               {[
@@ -48,9 +48,7 @@ export function AutomationProof() {
                 <span className="h-2.5 w-2.5 rounded-full bg-destructive/70" />
                 <span className="h-2.5 w-2.5 rounded-full bg-chart-4/80" />
                 <span className="h-2.5 w-2.5 rounded-full bg-chart-2/80" />
-                <span className="ml-3 text-xs text-muted-foreground">
-                  specifai · dashboard
-                </span>
+                <span className="ml-3 text-xs text-muted-foreground">specifai · dashboard</span>
               </div>
 
               <div className="p-6 space-y-4">
@@ -72,9 +70,7 @@ export function AutomationProof() {
                 </div>
 
                 <div className="rounded-xl border border-border p-4 space-y-3">
-                  <div className="text-xs font-medium text-muted-foreground">
-                    Automatický tok
-                  </div>
+                  <div className="text-xs font-medium text-muted-foreground">Automatický tok</div>
                   {[
                     {
                       icon: CalendarCheck,
@@ -110,13 +106,9 @@ export function AutomationProof() {
                       </div>
                       <div className="flex-1">
                         <div className="text-sm font-medium">{step.title}</div>
-                        <div className="text-xs text-muted-foreground">
-                          {step.meta}
-                        </div>
+                        <div className="text-xs text-muted-foreground">{step.meta}</div>
                       </div>
-                      {step.done && (
-                        <Check className="h-4 w-4 text-primary" />
-                      )}
+                      {step.done && <Check className="h-4 w-4 text-primary" />}
                     </div>
                   ))}
                 </div>

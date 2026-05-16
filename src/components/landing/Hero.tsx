@@ -68,8 +68,8 @@ export function Hero() {
 
         <RevealOnScroll delay={160}>
           <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Spojujeme moderní web, chytrý rezervační systém a automatizace na míru.
-            Získejte více času na to, co umíte nejlépe.
+            Spojujeme moderní web, chytrý rezervační systém a automatizace na míru. Získejte více
+            času na to, co umíte nejlépe.
           </p>
         </RevealOnScroll>
 

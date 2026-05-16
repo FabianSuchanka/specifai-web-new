@@ -27,10 +27,10 @@ export function ROICalculator() {
 
   // Calculations per month (approx 4.3 weeks)
   const monthlyAppointments = appointments[0] * 4.3;
-  
+
   // Time saved (approx 10 minutes per appointment for booking, calls, reminders)
   const hoursSaved = Math.round((monthlyAppointments * 10) / 60);
-  
+
   // No-show prevention (approx 5% no-shows prevented)
   const noShowsPrevented = Math.ceil(monthlyAppointments * 0.05);
   const moneySaved = noShowsPrevented * price[0];
@@ -44,13 +44,19 @@ export function ROICalculator() {
   return (
     <section id="kalkulacka" className="py-20 sm:py-28 bg-background relative overflow-hidden">
       {/* Decorative blobs (replaced expensive blur filter with radial-gradient) */}
-      <div 
-        className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] rounded-full pointer-events-none" 
-        style={{ background: "radial-gradient(circle, color-mix(in oklab, var(--primary) 5%, transparent) 0%, transparent 70%)" }}
+      <div
+        className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] rounded-full pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(circle, color-mix(in oklab, var(--primary) 5%, transparent) 0%, transparent 70%)",
+        }}
       />
-      <div 
-        className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full pointer-events-none" 
-        style={{ background: "radial-gradient(circle, color-mix(in oklab, var(--chart-2) 5%, transparent) 0%, transparent 70%)" }}
+      <div
+        className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(circle, color-mix(in oklab, var(--chart-2) 5%, transparent) 0%, transparent 70%)",
+        }}
       />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
@@ -64,34 +70,37 @@ export function ROICalculator() {
               Vyplatí se vám Autopilot?
             </h2>
             <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
-              Nastavte si svá čísla a zjistěte, kolik času a peněz vám SpecifAI měsíčně ušetří díky chytré automatizaci.
+              Nastavte si svá čísla a zjistěte, kolik času a peněz vám SpecifAI měsíčně ušetří díky
+              chytré automatizaci.
             </p>
           </div>
         </RevealOnScroll>
 
         <RevealOnScroll delay={120}>
-          <div 
+          <div
             ref={cardRef}
             className="mt-16 group relative rounded-3xl border border-border bg-card shadow-[var(--shadow-elegant)] overflow-hidden max-w-5xl mx-auto"
-            style={{
-              "--mouse-x": "50%",
-              "--mouse-y": "50%",
-            } as React.CSSProperties}
+            style={
+              {
+                "--mouse-x": "50%",
+                "--mouse-y": "50%",
+              } as React.CSSProperties
+            }
           >
             {/* Interactive Spotlight background */}
-            <div 
+            <div
               className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 group-hover:opacity-100"
               style={{
-                background: "radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(var(--primary-rgb), 0.04), transparent 40%)",
+                background:
+                  "radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(var(--primary-rgb), 0.04), transparent 40%)",
               }}
             />
 
             <div className="grid lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-border relative z-10">
-              
               {/* Left Side: Inputs */}
               <div className="p-8 sm:p-12">
                 <h3 className="text-xl font-semibold mb-8">Vaše současná čísla</h3>
-                
+
                 <div className="space-y-10">
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">
@@ -100,11 +109,11 @@ export function ROICalculator() {
                       </label>
                       <span className="text-xl font-bold text-primary">{appointments[0]}</span>
                     </div>
-                    <Slider 
-                      value={appointments} 
-                      onValueChange={setAppointments} 
-                      max={150} 
-                      min={10} 
+                    <Slider
+                      value={appointments}
+                      onValueChange={setAppointments}
+                      max={150}
+                      min={10}
                       step={5}
                       className="cursor-pointer"
                     />
@@ -121,11 +130,11 @@ export function ROICalculator() {
                       </label>
                       <span className="text-xl font-bold text-primary">{price[0]} Kč</span>
                     </div>
-                    <Slider 
-                      value={price} 
-                      onValueChange={setPrice} 
-                      max={3000} 
-                      min={200} 
+                    <Slider
+                      value={price}
+                      onValueChange={setPrice}
+                      max={3000}
+                      min={200}
                       step={100}
                       className="cursor-pointer"
                     />
@@ -140,14 +149,16 @@ export function ROICalculator() {
               {/* Right Side: Results */}
               <div className="p-8 sm:p-12 bg-muted/10">
                 <h3 className="text-xl font-semibold mb-8">Váš měsíční zisk s Autopilotem</h3>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-start gap-4 p-4 rounded-2xl bg-background border border-border/50 shadow-sm transition-transform hover:-translate-y-1 duration-300">
                     <div className="mt-1 h-10 w-10 shrink-0 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center">
                       <Clock className="h-5 w-5" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-muted-foreground">Získaný čas (bez volání a papírování)</p>
+                      <p className="text-sm font-medium text-muted-foreground">
+                        Získaný čas (bez volání a papírování)
+                      </p>
                       <p className="text-2xl font-bold text-foreground">+{hoursSaved} hodin</p>
                     </div>
                   </div>
@@ -157,9 +168,15 @@ export function ROICalculator() {
                       <ShieldCheck className="h-5 w-5" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-muted-foreground">Záchrana před propadnutím (SMS připomínky)</p>
-                      <p className="text-2xl font-bold text-foreground">+{moneySaved.toLocaleString("cs-CZ")} Kč</p>
-                      <p className="text-xs text-muted-foreground mt-1">Snížení No-shows o {noShowsPrevented} klientů</p>
+                      <p className="text-sm font-medium text-muted-foreground">
+                        Záchrana před propadnutím (SMS připomínky)
+                      </p>
+                      <p className="text-2xl font-bold text-foreground">
+                        +{moneySaved.toLocaleString("cs-CZ")} Kč
+                      </p>
+                      <p className="text-xs text-muted-foreground mt-1">
+                        Snížení No-shows o {noShowsPrevented} klientů
+                      </p>
                     </div>
                   </div>
 
@@ -168,9 +185,15 @@ export function ROICalculator() {
                       <TrendingUp className="h-5 w-5" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-muted-foreground">Automatický marketing (Reaktivace)</p>
-                      <p className="text-2xl font-bold text-foreground">+{extraMoney.toLocaleString("cs-CZ")} Kč</p>
-                      <p className="text-xs text-muted-foreground mt-1">Cca {extraBookings} dodatečné rezervace</p>
+                      <p className="text-sm font-medium text-muted-foreground">
+                        Automatický marketing (Reaktivace)
+                      </p>
+                      <p className="text-2xl font-bold text-foreground">
+                        +{extraMoney.toLocaleString("cs-CZ")} Kč
+                      </p>
+                      <p className="text-xs text-muted-foreground mt-1">
+                        Cca {extraBookings} dodatečné rezervace
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -187,7 +210,6 @@ export function ROICalculator() {
                   </p>
                 </div>
               </div>
-
             </div>
           </div>
         </RevealOnScroll>

@@ -36,9 +36,9 @@ export function FeatureTrinity() {
 
         <div className="mt-12 flex md:grid md:grid-cols-3 gap-6 overflow-x-auto snap-x snap-mandatory pb-8 -mx-4 px-4 sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {items.map((it, i) => (
-            <RevealOnScroll 
-              key={it.title} 
-              delay={i * 100} 
+            <RevealOnScroll
+              key={it.title}
+              delay={i * 100}
               className="w-[280px] max-w-[85vw] sm:w-[320px] md:w-auto md:max-w-none snap-center shrink-0 h-full flex flex-col"
             >
               <div className="group relative h-full flex-1 rounded-2xl border border-border bg-card p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)]">

@@ -35,9 +35,7 @@ export function FAQ() {
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <RevealOnScroll>
           <div className="text-center">
-            <p className="text-sm font-semibold tracking-wider text-primary uppercase">
-              FAQ
-            </p>
+            <p className="text-sm font-semibold tracking-wider text-primary uppercase">FAQ</p>
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight">
               Často kladené otázky
             </h2>
