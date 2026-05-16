@@ -42,8 +42,7 @@ export function Footer() {
               Specif<span className="text-primary">ai</span>
             </div>
             <p className="mt-3 text-sm text-muted-foreground max-w-xs">
-              Web, rezervace a automatizace na míru pro služby, kterým záleží na
-              čase klientů.
+              Web, rezervace a automatizace na míru pro služby, kterým záleží na čase klientů.
             </p>
             <div className="mt-5 flex items-center gap-3">
               {[Instagram, Facebook, Linkedin].map((Icon, i) => (

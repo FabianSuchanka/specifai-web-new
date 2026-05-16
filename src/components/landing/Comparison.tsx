@@ -42,7 +42,9 @@ export function Comparison() {
               Katalog vs. Vaše Vlastní Značka
             </h2>
             <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
-              Běžné rezervační platformy (jako Reservio) jsou skvělé na začátek. Pokud to ale myslíte s podnikáním vážně, potřebujete vlastní web, který pracuje pro vás, ne pro katalog.
+              Běžné rezervační platformy (jako Reservio) jsou skvělé na začátek. Pokud to ale
+              myslíte s podnikáním vážně, potřebujete vlastní web, který pracuje pro vás, ne pro
+              katalog.
             </p>
           </div>
         </RevealOnScroll>
@@ -57,10 +59,16 @@ export function Comparison() {
                     <th scope="col" className="px-6 py-5 font-semibold w-1/3">
                       Co porovnáváme
                     </th>
-                    <th scope="col" className="px-6 py-5 font-semibold w-1/3 border-l border-border bg-background/50">
+                    <th
+                      scope="col"
+                      className="px-6 py-5 font-semibold w-1/3 border-l border-border bg-background/50"
+                    >
                       Běžné katalogy
                     </th>
-                    <th scope="col" className="px-6 py-5 font-semibold w-1/3 border-l border-border bg-primary/5 text-primary">
+                    <th
+                      scope="col"
+                      className="px-6 py-5 font-semibold w-1/3 border-l border-border bg-primary/5 text-primary"
+                    >
                       SpecifAI
                     </th>
                   </tr>
@@ -68,9 +76,7 @@ export function Comparison() {
                 <tbody className="divide-y divide-border">
                   {comparisonData.map((row, index) => (
                     <tr key={index} className="hover:bg-muted/20 transition-colors">
-                      <td className="px-6 py-5 font-medium text-foreground">
-                        {row.feature}
-                      </td>
+                      <td className="px-6 py-5 font-medium text-foreground">{row.feature}</td>
                       <td className="px-6 py-5 text-muted-foreground border-l border-border bg-background/50">
                         <div className="flex items-start gap-2">
                           <X className="h-4 w-4 shrink-0 text-destructive mt-0.5" />
@@ -96,14 +102,18 @@ export function Comparison() {
                   <h3 className="font-semibold text-lg text-foreground mb-4">{row.feature}</h3>
                   <div className="space-y-4">
                     <div className="flex flex-col gap-1.5">
-                      <span className="text-[11px] font-bold text-muted-foreground uppercase tracking-wider">Běžné katalogy</span>
+                      <span className="text-[11px] font-bold text-muted-foreground uppercase tracking-wider">
+                        Běžné katalogy
+                      </span>
                       <div className="flex items-start gap-2 text-muted-foreground text-sm">
                         <X className="h-4 w-4 shrink-0 text-destructive mt-0.5" />
                         <span>{row.reservio}</span>
                       </div>
                     </div>
                     <div className="flex flex-col gap-1.5 pt-4 border-t border-border">
-                      <span className="text-[11px] font-bold text-primary uppercase tracking-wider">SpecifAI</span>
+                      <span className="text-[11px] font-bold text-primary uppercase tracking-wider">
+                        SpecifAI
+                      </span>
                       <div className="flex items-start gap-2 text-foreground font-medium text-sm">
                         <Check className="h-4 w-4 shrink-0 text-primary mt-0.5" />
                         <span>{row.specifai}</span>

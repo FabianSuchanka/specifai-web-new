@@ -69,8 +69,6 @@ const featuredProject = {
   ],
 };
 
-
-
 export function Projects() {
   const [slide, setSlide] = useState(0);
   const screenshots = featuredProject.screenshots;
@@ -90,8 +88,7 @@ export function Projects() {
               Vybrané realizace, které už běží na autopilota.
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Ukázka klientů, kterým jsme dodali web, rezervační systém a
-              automatizace na míru.
+              Ukázka klientů, kterým jsme dodali web, rezervační systém a automatizace na míru.
             </p>
           </div>
         </RevealOnScroll>
@@ -118,8 +115,9 @@ export function Projects() {
                       alt={s.alt}
                       loading="lazy"
                       aria-hidden={i !== slide}
-                      className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-500 ease-out ${i === slide ? "opacity-100" : "opacity-0"
-                        }`}
+                      className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-500 ease-out ${
+                        i === slide ? "opacity-100" : "opacity-0"
+                      }`}
                     />
                   ))}
 
@@ -154,10 +152,11 @@ export function Projects() {
                       onClick={() => setSlide(i)}
                       aria-label={`Zobrazit ${s.label}`}
                       aria-current={i === slide}
-                      className={`group relative overflow-hidden rounded-lg border bg-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${i === slide
+                      className={`group relative overflow-hidden rounded-lg border bg-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
+                        i === slide
                           ? "border-primary shadow-[var(--shadow-glow)] ring-1 ring-primary/40"
                           : "border-border hover:border-primary/40 opacity-80 hover:opacity-100"
-                        }`}
+                      }`}
                     >
                       <div className="aspect-[16/9] overflow-hidden">
                         <img
@@ -183,18 +182,15 @@ export function Projects() {
                     </div>
                     <div>
                       <p className="text-sm italic text-foreground/90 leading-relaxed">
-                        "Od té doby, co máme tento rezervační systém, už nám v ordinaci neustále nezvoní telefon. Pacienti se objednávají sami přes online recepci a my máme mnohem víc času na samotnou péči. Je to obrovská úleva pro celou ambulanci."
+                        "Od té doby, co máme tento rezervační systém, už nám v ordinaci neustále
+                        nezvoní telefon. Pacienti se objednávají sami přes online recepci a my máme
+                        mnohem víc času na samotnou péči. Je to obrovská úleva pro celou ambulanci."
                       </p>
-                      <p className="mt-3 text-xs font-bold text-foreground">
-                        MUDr. Dagmar Kubová
-                      </p>
-                      <p className="text-[11px] text-muted-foreground">
-                        Neurologická ambulance
-                      </p>
+                      <p className="mt-3 text-xs font-bold text-foreground">MUDr. Dagmar Kubová</p>
+                      <p className="text-[11px] text-muted-foreground">Neurologická ambulance</p>
                     </div>
                   </div>
                 </div>
-
               </div>
 
               {/* Copy */}
@@ -226,9 +222,7 @@ export function Projects() {
                       </span>
                       <div>
                         <p className="text-sm font-semibold">{f.title}</p>
-                        <p className="text-sm text-muted-foreground">
-                          {f.desc}
-                        </p>
+                        <p className="text-sm text-muted-foreground">{f.desc}</p>
                       </div>
                     </li>
                   ))}
@@ -236,16 +230,11 @@ export function Projects() {
 
                 <div className="mt-6 grid grid-cols-2 gap-3">
                   {featuredProject.metrics.map((m) => (
-                    <div
-                      key={m.label}
-                      className="rounded-xl border border-border bg-muted/40 p-4"
-                    >
+                    <div key={m.label} className="rounded-xl border border-border bg-muted/40 p-4">
                       <div className="text-2xl font-bold tracking-tight text-primary">
                         {m.value}
                       </div>
-                      <div className="mt-1 text-xs text-muted-foreground">
-                        {m.label}
-                      </div>
+                      <div className="mt-1 text-xs text-muted-foreground">{m.label}</div>
                     </div>
                   ))}
                 </div>
@@ -264,8 +253,6 @@ export function Projects() {
             </div>
           </article>
         </RevealOnScroll>
-
-
       </div>
     </section>
   );

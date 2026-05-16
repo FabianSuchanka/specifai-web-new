@@ -14,18 +14,31 @@ function CookiesPage() {
         <h1 className="text-3xl font-bold tracking-tight mb-8">Zásady používání souborů cookies</h1>
         <div className="prose prose-sm sm:prose-base dark:prose-invert text-muted-foreground space-y-6">
           <p>
-            Tato stránka používá soubory cookies k zajištění lepší uživatelské zkušenosti a analýze návštěvnosti.
+            Tato stránka používá soubory cookies k zajištění lepší uživatelské zkušenosti a analýze
+            návštěvnosti.
           </p>
           <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Co jsou cookies?</h2>
           <p>
-            Cookies jsou malé textové soubory, které do vašeho prohlížeče ukládají navštívené
-            webové stránky. Pomáhají webu pamatovat si informace o vaší návštěvě.
+            Cookies jsou malé textové soubory, které do vašeho prohlížeče ukládají navštívené webové
+            stránky. Pomáhají webu pamatovat si informace o vaší návštěvě.
           </p>
-          <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Jaké cookies používáme</h2>
+          <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">
+            Jaké cookies používáme
+          </h2>
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong className="text-foreground">Nezbytné cookies:</strong> Jsou nezbytně nutné pro základní fungování tohoto webu a nelze je vypnout.</li>
-            <li><strong className="text-foreground">Analytické cookies:</strong> Pomáhají nám pochopit, jak web používáte (např. prostřednictvím Google Analytics), abychom jej mohli vylepšovat.</li>
-            <li><strong className="text-foreground">Marketingové cookies:</strong> Využívají se k zobrazení relevantní reklamy.</li>
+            <li>
+              <strong className="text-foreground">Nezbytné cookies:</strong> Jsou nezbytně nutné pro
+              základní fungování tohoto webu a nelze je vypnout.
+            </li>
+            <li>
+              <strong className="text-foreground">Analytické cookies:</strong> Pomáhají nám
+              pochopit, jak web používáte (např. prostřednictvím Google Analytics), abychom jej
+              mohli vylepšovat.
+            </li>
+            <li>
+              <strong className="text-foreground">Marketingové cookies:</strong> Využívají se k
+              zobrazení relevantní reklamy.
+            </li>
           </ul>
           <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Jak spravovat cookies</h2>
           <p>Předvolby cookies můžete kdykoliv změnit v nastavení vašeho prohlížeče.</p>

@@ -25,7 +25,8 @@ export const Route = createFileRoute("/")({
       },
       {
         name: "keywords",
-        content: "rezervační systém, tvorba webu, ulehčení podnikání, automatizace procesů, web pro salón, kadeřnictví rezervace, Česko, SpecifAI",
+        content:
+          "rezervační systém, tvorba webu, ulehčení podnikání, automatizace procesů, web pro salón, kadeřnictví rezervace, Česko, SpecifAI",
       },
       { property: "og:title", content: "SpecifAI — Usnadněte si podnikání" },
       {

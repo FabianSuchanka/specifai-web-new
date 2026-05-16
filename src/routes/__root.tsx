@@ -10,6 +10,7 @@ import {
 
 import appCss from "../styles.css?url";
 import { CookieBanner } from "@/components/CookieBanner";
+import { Analytics } from "@vercel/analytics/react";
 
 function NotFoundComponent() {
   return (
@@ -75,19 +76,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "SpecifAI — Webové stránky a rezervační systémy na klíč" },
-      { name: "description", content: "Usnadněte si podnikání. Tvoříme moderní weby, rezervační systémy a automatizace pro salóny, kliniky a firmy v ČR." },
+      {
+        name: "description",
+        content:
+          "Usnadněte si podnikání. Tvoříme moderní weby, rezervační systémy a automatizace pro salóny, kliniky a firmy v ČR.",
+      },
       { name: "author", content: "SpecifAI" },
       { name: "geo.region", content: "CZ" },
       { name: "geo.placename", content: "Česká republika" },
       { property: "og:title", content: "SpecifAI — Webové stránky a rezervační systémy" },
-      { property: "og:description", content: "Usnadněte si podnikání s automatizací a moderním webem." },
+      {
+        property: "og:description",
+        content: "Usnadněte si podnikání s automatizací a moderním webem.",
+      },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "cs_CZ" },
       { property: "og:url", content: "https://www.specifai.cz/" },
       { property: "og:image", content: "https://www.specifai.cz/og-image.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "SpecifAI — Webové stránky a rezervační systémy na klíč" },
+      {
+        property: "og:image:alt",
+        content: "SpecifAI — Webové stránky a rezervační systémy na klíč",
+      },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@SpecifAI" },
       { name: "twitter:image", content: "https://www.specifai.cz/og-image.png" },
@@ -110,6 +121,7 @@ function RootComponent() {
       <HeadContent />
       <Outlet />
       <CookieBanner />
+      <Analytics />
       <Scripts />
     </QueryClientProvider>
   );

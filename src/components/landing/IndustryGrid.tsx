@@ -48,9 +48,7 @@ export function IndustryGrid() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <RevealOnScroll>
           <div className="max-w-2xl">
-            <p className="text-sm font-semibold tracking-wider text-primary uppercase">
-              Pro koho
-            </p>
+            <p className="text-sm font-semibold tracking-wider text-primary uppercase">Pro koho</p>
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight">
               Řešení pro každý obor, kde hraje roli čas.
             </h2>
@@ -65,9 +63,7 @@ export function IndustryGrid() {
                   <it.icon className="h-5 w-5" />
                 </div>
                 <h3 className="mt-4 text-lg font-semibold">{it.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                  {it.text}
-                </p>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{it.text}</p>
               </div>
             </RevealOnScroll>
           ))}

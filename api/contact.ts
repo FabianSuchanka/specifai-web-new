@@ -32,6 +32,8 @@ export default async function handler(req: any, res: any) {
 
     return res.status(200).json({ status: "success", message: "Zpráva byla úspěšně odeslána." });
   } catch (error) {
-    return res.status(500).json({ status: "error", message: "Při odesílání došlo k chybě na serveru." });
+    return res
+      .status(500)
+      .json({ status: "error", message: "Při odesílání došlo k chybě na serveru." });
   }
 }

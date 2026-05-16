@@ -5,17 +5,20 @@ const steps = [
   {
     icon: PhoneCall,
     title: "1. Úvodní hovor",
-    description: "Krátce si popovídáme o vašem podnikání, zjistíme vaše potřeby a navrhneme to nejlepší řešení přímo pro vás.",
+    description:
+      "Krátce si popovídáme o vašem podnikání, zjistíme vaše potřeby a navrhneme to nejlepší řešení přímo pro vás.",
   },
   {
     icon: Settings2,
     title: "2. My vše nastavíme",
-    description: "Vytvoříme vám prémiový web, nastavíme služby, napojíme kalendář a zprovozníme online recepci. Vy se o nic nestaráte.",
+    description:
+      "Vytvoříme vám prémiový web, nastavíme služby, napojíme kalendář a zprovozníme online recepci. Vy se o nic nestaráte.",
   },
   {
     icon: Rocket,
     title: "3. Spuštění a růst",
-    description: "Předáme vám hotový systém, ukážeme jak funguje a můžete začít přijímat rezervace. Odteď pracuje systém pro vás.",
+    description:
+      "Předáme vám hotový systém, ukážeme jak funguje a můžete začít přijímat rezervace. Odteď pracuje systém pro vás.",
   },
 ];
 
@@ -32,7 +35,8 @@ export function HowItWorks() {
               Jak probíhá spuštění?
             </h2>
             <p className="mt-4 text-muted-foreground text-lg">
-              Zapomeňte na zdlouhavé nastavování systémů. V rámci zřizovacího poplatku pro vás připravíme vše na klíč.
+              Zapomeňte na zdlouhavé nastavování systémů. V rámci zřizovacího poplatku pro vás
+              připravíme vše na klíč.
             </p>
           </div>
         </RevealOnScroll>
@@ -52,15 +56,11 @@ export function HowItWorks() {
                     <div className="absolute inset-0 rounded-full opacity-20 bg-[image:var(--gradient-primary)] mix-blend-overlay" />
                     <step.icon className="h-8 w-8 text-primary relative z-10" />
                   </div>
-                  
+
                   {/* Content */}
                   <div className="mt-8">
-                    <h3 className="text-xl font-bold text-foreground">
-                      {step.title}
-                    </h3>
-                    <p className="mt-3 text-muted-foreground leading-relaxed">
-                      {step.description}
-                    </p>
+                    <h3 className="text-xl font-bold text-foreground">{step.title}</h3>
+                    <p className="mt-3 text-muted-foreground leading-relaxed">{step.description}</p>
                   </div>
                 </div>
               </RevealOnScroll>

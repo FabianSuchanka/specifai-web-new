@@ -1,13 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-  SheetHeader,
-  SheetTitle,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 
 const links = [
   { href: "#funkce", label: "Inovace" },
@@ -30,10 +24,7 @@ export function Header() {
 
   // Scroll spy disabled to prevent potential viewport thrashing on mobile
 
-  const handleNavClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    href: string,
-  ) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (!href.startsWith("#")) return;
     e.preventDefault();
     const id = href.slice(1);
@@ -116,9 +107,7 @@ export function Header() {
                   onClick={(e) => handleNavClick(e, l.href)}
                   aria-current={activeId === l.href.slice(1) ? "page" : undefined}
                   className={`text-base font-medium hover:text-foreground transition-colors ${
-                    activeId === l.href.slice(1)
-                      ? "text-primary"
-                      : "text-foreground/80"
+                    activeId === l.href.slice(1) ? "text-primary" : "text-foreground/80"
                   }`}
                 >
                   {l.label}
